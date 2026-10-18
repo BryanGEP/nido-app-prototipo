@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ComunidadRouteImport } from './routes/comunidad'
+import { Route as InicioRouteImport } from './routes/inicio'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as PerfilRouteImport } from './routes/perfil'
+import { Route as RegistroRouteImport } from './routes/registro'
+import { Route as ResidenciaRouteImport } from './routes/residencia'
+import { Route as ResidenciasRouteImport } from './routes/residencias'
+import { Route as VerificarRouteImport } from './routes/verificar'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComunidadRoute = ComunidadRouteImport.update({
+  id: '/comunidad',
+  path: '/comunidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InicioRoute = InicioRouteImport.update({
+  id: '/inicio',
+  path: '/inicio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerfilRoute = PerfilRouteImport.update({
+  id: '/perfil',
+  path: '/perfil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegistroRoute = RegistroRouteImport.update({
+  id: '/registro',
+  path: '/registro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidenciaRoute = ResidenciaRouteImport.update({
+  id: '/residencia',
+  path: '/residencia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidenciasRoute = ResidenciasRouteImport.update({
+  id: '/residencias',
+  path: '/residencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerificarRoute = VerificarRouteImport.update({
+  id: '/verificar',
+  path: '/verificar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
+  '/inicio': typeof InicioRoute
+  '/login': typeof LoginRoute
+  '/perfil': typeof PerfilRoute
+  '/registro': typeof RegistroRoute
+  '/residencia': typeof ResidenciaRoute
+  '/residencias': typeof ResidenciasRoute
+  '/verificar': typeof VerificarRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
+  '/inicio': typeof InicioRoute
+  '/login': typeof LoginRoute
+  '/perfil': typeof PerfilRoute
+  '/registro': typeof RegistroRoute
+  '/residencia': typeof ResidenciaRoute
+  '/residencias': typeof ResidenciasRoute
+  '/verificar': typeof VerificarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
+  '/inicio': typeof InicioRoute
+  '/login': typeof LoginRoute
+  '/perfil': typeof PerfilRoute
+  '/registro': typeof RegistroRoute
+  '/residencia': typeof ResidenciaRoute
+  '/residencias': typeof ResidenciasRoute
+  '/verificar': typeof VerificarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/comunidad'
+    | '/inicio'
+    | '/login'
+    | '/perfil'
+    | '/registro'
+    | '/residencia'
+    | '/residencias'
+    | '/verificar'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/comunidad'
+    | '/inicio'
+    | '/login'
+    | '/perfil'
+    | '/registro'
+    | '/residencia'
+    | '/residencias'
+    | '/verificar'
+  id:
+    | '__root__'
+    | '/'
+    | '/comunidad'
+    | '/inicio'
+    | '/login'
+    | '/perfil'
+    | '/registro'
+    | '/residencia'
+    | '/residencias'
+    | '/verificar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ComunidadRoute: typeof ComunidadRoute
+  InicioRoute: typeof InicioRoute
+  LoginRoute: typeof LoginRoute
+  PerfilRoute: typeof PerfilRoute
+  RegistroRoute: typeof RegistroRoute
+  ResidenciaRoute: typeof ResidenciaRoute
+  ResidenciasRoute: typeof ResidenciasRoute
+  VerificarRoute: typeof VerificarRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/comunidad': {
+      id: '/comunidad'
+      path: '/comunidad'
+      fullPath: '/comunidad'
+      preLoaderRoute: typeof ComunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inicio': {
+      id: '/inicio'
+      path: '/inicio'
+      fullPath: '/inicio'
+      preLoaderRoute: typeof InicioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perfil': {
+      id: '/perfil'
+      path: '/perfil'
+      fullPath: '/perfil'
+      preLoaderRoute: typeof PerfilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/registro': {
+      id: '/registro'
+      path: '/registro'
+      fullPath: '/registro'
+      preLoaderRoute: typeof RegistroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residencia': {
+      id: '/residencia'
+      path: '/residencia'
+      fullPath: '/residencia'
+      preLoaderRoute: typeof ResidenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residencias': {
+      id: '/residencias'
+      path: '/residencias'
+      fullPath: '/residencias'
+      preLoaderRoute: typeof ResidenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verificar': {
+      id: '/verificar'
+      path: '/verificar'
+      fullPath: '/verificar'
+      preLoaderRoute: typeof VerificarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ComunidadRoute: ComunidadRoute,
+  InicioRoute: InicioRoute,
+  LoginRoute: LoginRoute,
+  PerfilRoute: PerfilRoute,
+  RegistroRoute: RegistroRoute,
+  ResidenciaRoute: ResidenciaRoute,
+  ResidenciasRoute: ResidenciasRoute,
+  VerificarRoute: VerificarRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
