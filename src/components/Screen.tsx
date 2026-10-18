@@ -15,6 +15,7 @@ const menuDestinations: Record<string, ScreenDestination> = {
 
 const rules: [RegExp, ScreenDestination | "back"][] = [
   [/^arrow_back/, "back"],
+  [/Crear cuenta y continuar/i, "/verificar"],
   [/Iniciar Sesi[oó]n|^login/i, "/login"],
   [/Registrarme|Crear cuenta/i, "/registro"],
   [/Ingresar a mi suite|Activar estancia|Llave Digital|Workspace|Apple ID|Google|^Apple/, "/verificar"],
