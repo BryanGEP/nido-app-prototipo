@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Imported screen menus resolve their `data-path` attributes through the shared Screen navigation map, including source aliases, rather than depending on icon/text spacing; this keeps every screen's menu destinations consistent.
